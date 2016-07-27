@@ -14,6 +14,7 @@
 		8E8E935C1D457A9A0076E764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8E935A1D457A9A0076E764 /* LaunchScreen.storyboard */; };
 		8E8E93671D457A9B0076E764 /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E93661D457A9B0076E764 /* QuizAppTests.swift */; };
 		8E8E93721D457A9B0076E764 /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E93711D457A9B0076E764 /* QuizAppUITests.swift */; };
+		8ECDE7341D483FBB001E890E /* GameSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ECDE7331D483FBB001E890E /* GameSound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8E8E936D1D457A9B0076E764 /* QuizAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8E93711D457A9B0076E764 /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		8E8E93731D457A9B0076E764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ECDE7331D483FBB001E890E /* GameSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameSound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				8E8E93581D457A9A0076E764 /* Assets.xcassets */,
 				8E8E935A1D457A9A0076E764 /* LaunchScreen.storyboard */,
 				8E8E935D1D457A9A0076E764 /* Info.plist */,
+				8ECDE7331D483FBB001E890E /* GameSound.wav */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ECDE7341D483FBB001E890E /* GameSound.wav in Resources */,
 				8E8E935C1D457A9A0076E764 /* LaunchScreen.storyboard in Resources */,
 				8E8E93591D457A9A0076E764 /* Assets.xcassets in Resources */,
 				8E8E93571D457A9A0076E764 /* Main.storyboard in Resources */,
@@ -482,6 +486,7 @@
 				8E8E93781D457A9B0076E764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E8E93791D457A9B0076E764 /* Build configuration list for PBXNativeTarget "QuizAppTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				8E8E937B1D457A9B0076E764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E8E937C1D457A9B0076E764 /* Build configuration list for PBXNativeTarget "QuizAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				8E8E937E1D457A9B0076E764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfN-aC-g4I">
-                                <rect key="frame" x="150" y="40" width="300" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue whales are technically whales Blue whales are technically whales" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfN-aC-g4I">
+                                <rect key="frame" x="20" y="40" width="560" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EZJ-Dd-vE6"/>
                                     <constraint firstAttribute="width" constant="150" id="OA0-Sn-Bb6"/>
@@ -33,11 +33,12 @@
                                     <mask key="constraints">
                                         <exclude reference="EZJ-Dd-vE6"/>
                                         <exclude reference="OA0-Sn-Bb6"/>
+                                        <exclude reference="qQB-xD-YdG"/>
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkj-2R-dWH">
-                                <rect key="frame" x="150" y="110" width="300" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue whales are technically whales Blue whales are technically whales" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkj-2R-dWH">
+                                <rect key="frame" x="20" y="110" width="560" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LyL-yy-8fa"/>
                                     <constraint firstAttribute="width" constant="300" id="ntk-Of-qAr"/>
@@ -45,6 +46,11 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ntk-Of-qAr"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-uK-G6h">
                                 <rect key="frame" x="20" y="180" width="560" height="50"/>
@@ -61,22 +67,9 @@
                                         <exclude reference="Rsz-vR-tFU"/>
                                     </mask>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypu-cJ-Qkh">
-                                <rect key="frame" x="20" y="250" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="DJS-qS-auT"/>
-                                    <constraint firstAttribute="width" constant="300" id="t1F-b6-his"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Answer 2"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="t1F-b6-his"/>
-                                    </mask>
-                                </variation>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xqg-tB-DYf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo9-ar-ggr">
                                 <rect key="frame" x="20" y="320" width="560" height="50"/>
@@ -93,6 +86,9 @@
                                         <exclude reference="o8G-my-EDb"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hac-Y0-L5X"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xex-hD-hTf">
                                 <rect key="frame" x="20" y="390" width="560" height="50"/>
@@ -109,6 +105,9 @@
                                         <exclude reference="ISX-Xx-nWf"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcU-JY-JFx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJV-Z7-QCj">
                                 <rect key="frame" x="20" y="490" width="560" height="50"/>
@@ -125,6 +124,28 @@
                                         <exclude reference="Ok9-Uh-1Rh"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="playAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="30C-3m-ZuG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypu-cJ-Qkh">
+                                <rect key="frame" x="20" y="250" width="560" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DJS-qS-auT"/>
+                                    <constraint firstAttribute="width" constant="300" id="t1F-b6-his"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Answer 2"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="t1F-b6-his"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPQ-s6-18D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549019607843" green="0.16862745098039217" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,14 +165,18 @@
                             <constraint firstItem="QJV-Z7-QCj" firstAttribute="top" secondItem="Xex-hD-hTf" secondAttribute="bottom" priority="250" constant="50" id="Lce-Og-Ox1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="qo9-ar-ggr" secondAttribute="leading" id="O31-Yy-C2v"/>
                             <constraint firstItem="Gkj-2R-dWH" firstAttribute="top" secondItem="dfN-aC-g4I" secondAttribute="bottom" constant="20" id="PCk-nW-zeS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dfN-aC-g4I" secondAttribute="trailing" id="Rnx-Px-bNn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gkj-2R-dWH" secondAttribute="trailing" id="TxT-EN-qOU"/>
                             <constraint firstItem="ypu-cJ-Qkh" firstAttribute="top" secondItem="8IR-uK-G6h" secondAttribute="bottom" priority="250" constant="20" id="UAg-aO-jGG"/>
                             <constraint firstItem="qo9-ar-ggr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ujl-Hg-C0S"/>
                             <constraint firstItem="dfN-aC-g4I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Yuk-7u-fcy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dfN-aC-g4I" secondAttribute="leading" id="ZFQ-cK-I1s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8IR-uK-G6h" secondAttribute="trailing" id="ZUY-VG-zMG"/>
                             <constraint firstItem="Xex-hD-hTf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qo9-ar-ggr" secondAttribute="bottom" constant="10" id="cf1-Py-Yca"/>
                             <constraint firstItem="QJV-Z7-QCj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Xex-hD-hTf" secondAttribute="bottom" priority="750" constant="10" id="f17-gd-f8R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xex-hD-hTf" secondAttribute="trailing" id="f7R-eF-ejb"/>
                             <constraint firstItem="dfN-aC-g4I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fId-WT-Sxd"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Gkj-2R-dWH" secondAttribute="leading" id="hgM-I0-hWI"/>
                             <constraint firstItem="qo9-ar-ggr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ypu-cJ-Qkh" secondAttribute="bottom" constant="10" id="lfj-NC-RRb"/>
                             <constraint firstItem="ypu-cJ-Qkh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8IR-uK-G6h" secondAttribute="bottom" constant="10" id="maS-Be-bIp"/>
                             <constraint firstItem="Xex-hD-hTf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rcl-vj-mbx"/>
@@ -170,6 +195,15 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="QJV-Z7-QCj" id="3yo-W7-O74"/>
+                        <outlet property="answer1Button" destination="8IR-uK-G6h" id="vEr-Zz-prk"/>
+                        <outlet property="answer2Button" destination="ypu-cJ-Qkh" id="iGQ-nL-4Q7"/>
+                        <outlet property="answer3Button" destination="qo9-ar-ggr" id="fb6-O5-vDb"/>
+                        <outlet property="answer4Button" destination="Xex-hD-hTf" id="MaK-2b-V4i"/>
+                        <outlet property="questionLabel" destination="dfN-aC-g4I" id="3kr-vQ-ptj"/>
+                        <outlet property="resultLabel" destination="Gkj-2R-dWH" id="qNT-MX-dgS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
