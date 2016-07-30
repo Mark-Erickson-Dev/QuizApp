@@ -15,6 +15,9 @@
 		8E8E93671D457A9B0076E764 /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E93661D457A9B0076E764 /* QuizAppTests.swift */; };
 		8E8E93721D457A9B0076E764 /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E93711D457A9B0076E764 /* QuizAppUITests.swift */; };
 		8ECDE7341D483FBB001E890E /* GameSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8ECDE7331D483FBB001E890E /* GameSound.wav */; };
+		8EECE5071D4BE9240011AAC1 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EECE5061D4BE9240011AAC1 /* Trivia.swift */; };
+		8EECE50C1D4C39580011AAC1 /* chime_up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8EECE50A1D4C39580011AAC1 /* chime_up.wav */; };
+		8EECE50D1D4C39580011AAC1 /* blip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8EECE50B1D4C39580011AAC1 /* blip.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8E8E93711D457A9B0076E764 /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		8E8E93731D457A9B0076E764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ECDE7331D483FBB001E890E /* GameSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameSound.wav; sourceTree = "<group>"; };
+		8EECE5061D4BE9240011AAC1 /* Trivia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		8EECE50A1D4C39580011AAC1 /* chime_up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chime_up.wav; sourceTree = "<group>"; };
+		8EECE50B1D4C39580011AAC1 /* blip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blip.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,13 @@
 			children = (
 				8E8E93511D457A9A0076E764 /* AppDelegate.swift */,
 				8E8E93531D457A9A0076E764 /* ViewController.swift */,
+				8EECE5061D4BE9240011AAC1 /* Trivia.swift */,
 				8E8E93551D457A9A0076E764 /* Main.storyboard */,
 				8E8E93581D457A9A0076E764 /* Assets.xcassets */,
 				8E8E935A1D457A9A0076E764 /* LaunchScreen.storyboard */,
 				8E8E935D1D457A9A0076E764 /* Info.plist */,
+				8EECE50A1D4C39580011AAC1 /* chime_up.wav */,
+				8EECE50B1D4C39580011AAC1 /* blip.wav */,
 				8ECDE7331D483FBB001E890E /* GameSound.wav */,
 			);
 			path = QuizApp;
@@ -232,8 +241,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EECE50C1D4C39580011AAC1 /* chime_up.wav in Resources */,
 				8ECDE7341D483FBB001E890E /* GameSound.wav in Resources */,
 				8E8E935C1D457A9A0076E764 /* LaunchScreen.storyboard in Resources */,
+				8EECE50D1D4C39580011AAC1 /* blip.wav in Resources */,
 				8E8E93591D457A9A0076E764 /* Assets.xcassets in Resources */,
 				8E8E93571D457A9A0076E764 /* Main.storyboard in Resources */,
 			);
@@ -261,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8E93541D457A9A0076E764 /* ViewController.swift in Sources */,
+				8EECE5071D4BE9240011AAC1 /* Trivia.swift in Sources */,
 				8E8E93521D457A9A0076E764 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
