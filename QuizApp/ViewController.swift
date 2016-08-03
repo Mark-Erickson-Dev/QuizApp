@@ -18,9 +18,12 @@ class ViewController: UIViewController {
     var indexOfSelectedQuestion: Int = 0
     var questionIndexes = [Int]()
     
-    var gameSound: SystemSoundID = 0
+    var startSound: SystemSoundID = 0
     var correctSound: SystemSoundID = 1
     var incorrectSound: SystemSoundID = 2
+    
+    let incorrectColor = UIColor.orangeColor()
+    let correctColor = UIColor(red: 0/255.0, green: 147/255.0, blue: 135/255.0, alpha: 1.0)
     
     let trivia = TriviaSet().trivia
     
@@ -32,14 +35,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var answer4Button: UIButton!
     
-    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var playAgainButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadGameSounds()
         // Start game
         resultLabel.text = ""
-        playGameStartSound()
+        setupButtons()
+        playGameSound(startSound)
         displayQuestion()
     }
     
@@ -57,9 +61,6 @@ class ViewController: UIViewController {
         } while questionIndexes.contains(indexOfSelectedQuestion) == true
         
         questionIndexes.append(indexOfSelectedQuestion)
-        print("questionIndexes.count \(questionIndexes.count)")
-        
-        print(questionIndexes)
         
         let selectedTrivia = trivia[indexOfSelectedQuestion]
         questionLabel.text = selectedTrivia.question
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
         answer3Button.setTitle(selectedTrivia.answers[2], forState: .Normal)
         answer4Button.setTitle(selectedTrivia.answers[3], forState: .Normal)
         
-        actionButton.hidden = true
+        playAgainButton.hidden = true
     }
     
     func displayScore() {
@@ -80,11 +81,12 @@ class ViewController: UIViewController {
         answer4Button.hidden = true
         
         // Display play again button
-        actionButton.hidden = false
+        playAgainButton.hidden = false
         
         let score = Double(correctQuestions)/Double(questionsPerRound)
         
         var resultMessage = ""
+        resultLabel.textColor = UIColor.cyanColor()
         
         if score >= 0.75 {
             resultMessage += "Way to go!\n"
@@ -114,12 +116,14 @@ class ViewController: UIViewController {
             sender === answer3Button && answer3Button.titleLabel?.text == selectedTrivia.answers[correctAnswer - 1] ||
             sender === answer4Button && answer4Button.titleLabel?.text == selectedTrivia.answers[correctAnswer - 1]) {
             correctQuestions += 1
+            resultLabel.textColor = correctColor
             resultLabel.text = "Correct!"
-            playCorrectSound()
+            playGameSound(correctSound)
             
         } else {
+            resultLabel.textColor = incorrectColor
             resultLabel.text = "Sorry, wrong answer! The correct answer is \(selectedTrivia.answers[correctAnswer - 1])"
-            playIncorrectSound()
+            playGameSound(incorrectSound)
         }
         
         loadNextRoundWithDelay(seconds: 2)
@@ -151,6 +155,14 @@ class ViewController: UIViewController {
     
     // MARK: Helper Methods
     
+    func setupButtons() {
+        answer1Button.layer.cornerRadius = 5
+        answer2Button.layer.cornerRadius = 5
+        answer3Button.layer.cornerRadius = 5
+        answer4Button.layer.cornerRadius = 5
+        playAgainButton.layer.cornerRadius = 5
+    }
+    
     func loadNextRoundWithDelay(seconds seconds: Int) {
         // Converts a delay in seconds to nanoseconds as signed 64 bit integer
         let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
@@ -166,7 +178,7 @@ class ViewController: UIViewController {
     func loadGameSounds() {
         let pathToGameSoundFile = NSBundle.mainBundle().pathForResource("GameSound", ofType: "wav")
         let gameSoundURL = NSURL(fileURLWithPath: pathToGameSoundFile!)
-        AudioServicesCreateSystemSoundID(gameSoundURL, &gameSound)
+        AudioServicesCreateSystemSoundID(gameSoundURL, &startSound)
         
         let pathToCorrectSoundFile = NSBundle.mainBundle().pathForResource("chime_up", ofType: "wav")
         let correctSoundURL = NSURL(fileURLWithPath: pathToCorrectSoundFile!)
@@ -177,16 +189,9 @@ class ViewController: UIViewController {
         AudioServicesCreateSystemSoundID(incorrectSoundURL, &incorrectSound)
     }
     
-    func playGameStartSound() {
+    func playGameSound(gameSound: SystemSoundID) {
         AudioServicesPlaySystemSound(gameSound)
     }
-    
-    func playCorrectSound() {
-        AudioServicesPlaySystemSound(correctSound)
-    }
-    
-    func playIncorrectSound() {
-        AudioServicesPlaySystemSound(incorrectSound)
-    }
+
 }
 

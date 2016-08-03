@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="width" constant="300" id="ntk-Of-qAr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -109,25 +109,6 @@
                                     <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcU-JY-JFx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJV-Z7-QCj">
-                                <rect key="frame" x="20" y="490" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Ok9-Uh-1Rh"/>
-                                    <constraint firstAttribute="height" constant="50" id="PYs-PG-mMM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Action Button"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Ok9-Uh-1Rh"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="playAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="30C-3m-ZuG"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypu-cJ-Qkh">
                                 <rect key="frame" x="20" y="250" width="560" height="50"/>
                                 <color key="backgroundColor" red="0.047058823530000002" green="0.47450980390000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -145,6 +126,25 @@
                                 </variation>
                                 <connections>
                                     <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPQ-s6-18D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJV-Z7-QCj">
+                                <rect key="frame" x="20" y="490" width="560" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.57647058819999997" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ok9-Uh-1Rh"/>
+                                    <constraint firstAttribute="height" constant="50" id="PYs-PG-mMM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Play Again"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ok9-Uh-1Rh"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="playAgain" destination="BYZ-38-t0r" eventType="touchUpInside" id="30C-3m-ZuG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,11 +196,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="QJV-Z7-QCj" id="3yo-W7-O74"/>
                         <outlet property="answer1Button" destination="8IR-uK-G6h" id="vEr-Zz-prk"/>
                         <outlet property="answer2Button" destination="ypu-cJ-Qkh" id="iGQ-nL-4Q7"/>
                         <outlet property="answer3Button" destination="qo9-ar-ggr" id="fb6-O5-vDb"/>
                         <outlet property="answer4Button" destination="Xex-hD-hTf" id="MaK-2b-V4i"/>
+                        <outlet property="playAgainButton" destination="QJV-Z7-QCj" id="rE3-b5-uoG"/>
                         <outlet property="questionLabel" destination="dfN-aC-g4I" id="3kr-vQ-ptj"/>
                         <outlet property="resultLabel" destination="Gkj-2R-dWH" id="qNT-MX-dgS"/>
                     </connections>
