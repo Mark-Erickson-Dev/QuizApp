@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E3FEE9E1D68D23E008D2642 /* TriviaSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3FEE9D1D68D23E008D2642 /* TriviaSet.swift */; };
 		8E8E93521D457A9A0076E764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E93511D457A9A0076E764 /* AppDelegate.swift */; };
 		8E8E93541D457A9A0076E764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E93531D457A9A0076E764 /* ViewController.swift */; };
 		8E8E93571D457A9A0076E764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8E93551D457A9A0076E764 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E3FEE9D1D68D23E008D2642 /* TriviaSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaSet.swift; sourceTree = "<group>"; };
 		8E8E934E1D457A9A0076E764 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8E93511D457A9A0076E764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E8E93531D457A9A0076E764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8E8E93511D457A9A0076E764 /* AppDelegate.swift */,
 				8E8E93531D457A9A0076E764 /* ViewController.swift */,
 				8EECE5061D4BE9240011AAC1 /* Trivia.swift */,
+				8E3FEE9D1D68D23E008D2642 /* TriviaSet.swift */,
 				8E8E93551D457A9A0076E764 /* Main.storyboard */,
 				8E8E93581D457A9A0076E764 /* Assets.xcassets */,
 				8E8E935A1D457A9A0076E764 /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8E93541D457A9A0076E764 /* ViewController.swift in Sources */,
+				8E3FEE9E1D68D23E008D2642 /* TriviaSet.swift in Sources */,
 				8EECE5071D4BE9240011AAC1 /* Trivia.swift in Sources */,
 				8E8E93521D457A9A0076E764 /* AppDelegate.swift in Sources */,
 			);
